@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        <p>
+            {{ form.title.label_tag }}<br>
+            {{ form.title }}
+        </p>
+
+        <p>
+            {{ form.slug.label_tag }}<br>
+            {{ form.slug }}
+        </p>
+
+        <p>
+            {{ form.body.label_tag }}<br>
+            {{ form.body }}
+        </p>
+
+        <p>
+            {{ form.status.label_tag }}<br>
+            {{ form.status }}
+        </p>
+
+        <button type="submit">Сохранить</button>
+    </form>
+{% endblock %}
