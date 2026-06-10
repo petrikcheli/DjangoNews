@@ -12,6 +12,8 @@ from .serializers import PostSerializer, PostDraftSerializer
 from django.db.models import QuerySet
 from rest_framework import generics, permissions
 
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
 from .forms import PostForm
 
 @login_required
